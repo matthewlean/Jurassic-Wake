@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+  <div class="page-wrapper">
+
+  {% include header-alt.html %}
+
+<div class="splash-full" id="hero-header" style="background-image: url({{site.baseurl}}/assets/site-post/{{page.img}}); background-size: cover;position: relative;">
+
+  <div class="splash-video-wrapper">
+      {% if page.color-1 %}
+        	<div style="background-image: linear-gradient(to bottom right, #{{ page.color-1 | escape }}, #{{ page.color-2 | escape }});" class="project-image-gradient"></div>
+        {% else %}
+          <div style="background-image: linear-gradient(270deg,#00d0ff,#036aed);" class="project-image-gradient"></div>
+      {% endif %}
+
+    {% if page.video %}
+    <video class="splash-video" playsinline="" autoplay="" muted="" loop="" poster="{{site.baseurl}}/assets/site-post/{{page.img}}" id="bgvid">
+      <source class="splash-video" src="{{site.baseurl}}/assets/site-video/{{page.video}}" type="video/mp4">
+    </video>
+    {% endif %}
+
+  </div>
+
+
+  <div class="site-container splash-overlay">
+    <div class="header-content-container">
+      <div class="splash-headline">
+        <img style="width:90%;" src="/assets/site-brand/jurassic-logo.png">
+        <!-- <h1 class="brand-name">{{ page.title }}</h1> -->
+				<!-- <p class="brand-slogan">{{ page.description | escape }}</p>
+        <p class="date">{{ page.date | date_to_long_string }}</p> -->
+        <h2 class="coming-soon">Website Coming Soon</h2>
+        <h3 class="contact-text">Contact us to book a session</h3>
+        <p class="contact-info">
+          <a href="tel:07853303667">07853303667</a> -
+          <a href="mail:enquiries@jurassicwakeandski.com">enquiries@jurassicwakeandski.com</p>
+        <div class="social">
+          <i class="fab fa-2x fa-facebook"></i>
+          <i class="fab fa-2x fa-instagram"></i>
+          <i class="fab fa-2x fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</body>
+
+</html>
